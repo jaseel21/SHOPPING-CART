@@ -3,6 +3,9 @@
         <div class="col-md-6 m-auto">
             <h2 class="text-center">Login</h2>
             <form action="/login" method="POST">
+            {{#if loginErr}}
+            <p>{{loginErr}}</p>
+            {{/if}}
             <div class="form-group">
                 <label>Email address</label>
                 <input type="email" name="Email" class="form-control" placeholder="Enter email">
