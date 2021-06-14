@@ -4,14 +4,16 @@
             {{#each products}}
 
             <div class="col-md-3 p-3">
-                <div class="card" style="width: 15rem; height: 25rem; background: rgb(232, 241, 240);" >
+                <div class="card" style=" background: rgb(232, 241, 240); border-radius: 15px;" >
                     <img class="card-img-top"
                         src="/product-images/{{this._id}}.jpg"
-                        alt="Card image cap" style="height: 25rem; width: 15rem;">
+                        alt="Card image cap" style="height: 14rem; border-radius: 15px;"> 
                     <div class="card-body">
                         <h5 class="card-title">{{this.Name}}</h5>
+                        <h6 class="">{{this.Price}}</h6>
                         <p class="card-text">{{this.Description}}</p>
-                        <a href="/" class="btn btn-primary">Add to cart</a>
+                        
+                        <button onclick="AddToCart('{{this._id}}')" class="btn btn-success">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -20,3 +22,4 @@
         </div>
         </div>
     </section>
+    

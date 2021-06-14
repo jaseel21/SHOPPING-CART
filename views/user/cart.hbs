@@ -1,1 +1,23 @@
-<h1 class="text-center">Cart is emty</h1>
+<section>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Title</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            {{#each products}}
+            <tbody>
+                <tr>
+                    <td><img style="height: 70px; width: 70px;" src="/product-images/{{this._id}}.jpg" alt=""></td>
+                    <td>{{this.Name}}</td>
+                    <td><button class="card-item-count">-</button>1<button>+</button></td>
+                    <td><a href="" class="btn btn-danger">Remove</a></td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+    </div>
+</section>
