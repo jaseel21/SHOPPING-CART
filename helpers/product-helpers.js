@@ -10,6 +10,7 @@ module.exports={
     getAllProducts:()=>{
         return new Promise((resolve,reject)=>{
             let products=db.get().collection(collection.PRODUCT_COLLECTION).find().toArray()
+            console.log(products)
             resolve(products)
         })
     },
